@@ -9,6 +9,7 @@ const port = 3001;
 
 app.use(
   session({
+    // LMAO. The crazy Thursday is too crazy.
     secret: "v me 50",
     resave: false,
     saveUninitialized: true,
@@ -29,7 +30,7 @@ app.use(express.static(path.join(__dirname, "frontend/build")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
+// Very clear routes for different functions
 app.use("/api/query", queryRoutes);
 app.use("/api/movie", movieRoutes);
 app.use("/api/review", reviewRoutes);
